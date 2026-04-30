@@ -1,0 +1,39 @@
+# YouTube Clone - robots.txt
+# Generated for video streaming platform
+
+User-agent: *
+Allow: /
+Allow: /api/search
+Allow: /trending
+Disallow: /admin
+Disallow: /api/internal
+Disallow: /*.json$
+Disallow: /.env*
+
+# Allow search engines to crawl sitemap
+Allow: /sitemap.xml
+Allow: /sitemap-*.xml
+
+# Crawl delay settings (in seconds)
+Crawl-delay: 1
+
+# Specific rules for Google bot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+Request-rate: 1/1s
+
+# Specific rules for Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: MJ12bot
+User-agent: AhrefsBot
+User-agent: SemrushBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://your-deployed-url.com/sitemap.xml
+Sitemap: https://your-deployed-url.com/sitemap-videos.xml
